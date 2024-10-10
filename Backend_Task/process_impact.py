@@ -9,7 +9,6 @@ def load_data() -> pd.DataFrame:
     recipes_df = pd.read_csv(os.path.join(current_dir, 'recipes.csv'))
     return food_classes_df, recipes_df
 
-# Function to normalise the name
 def normalize_name(name: str) -> str:
     """
     Normalizes a given name by removing punctuation, converting to lowercase,
@@ -26,7 +25,6 @@ def normalize_name(name: str) -> str:
     name = ' '.join(sorted(name.split()))  # Arrange words in alphabetical order and join
     return name
 
-# Class to represent a Food Class
 class FoodClass:
     """
     Represents a food class in the hierarchy, storing the ID, name, CO2 impact, 
@@ -44,7 +42,6 @@ class FoodClass:
         self.impact = impact
         self.parent_id = parent_id
 
-# Function to build the food class hierarchy
 def build_food_class_hierarchy(df: pd.DataFrame) -> dict:
     """
     Constructs a dictionary to represent the food class hierarchy from a DataFrame.
@@ -60,7 +57,6 @@ def build_food_class_hierarchy(df: pd.DataFrame) -> dict:
         food_classes[row['ID']] = FoodClass(row['ID'], row['Name'], row['Impact / kg'], row['Parent ID'])
     return food_classes
 
-# Recursive function to retrieve impact
 def get_impact(food_class_id: int) -> float:
     """
     Recursively calculates the CO2 impact for a given food class ID.
@@ -83,16 +79,15 @@ def get_impact(food_class_id: int) -> float:
         raise ValueError(f"No impact available and no parent to recurse for {food_class.name}")
     return get_impact(food_class.parent_id)
 
-# Function to calculate the impact for each recipe
 def calculate_recipe_impact(recipe: pd.DataFrame) -> float:
     """
-    Calculates the total CO₂ impact of a recipe based on its ingredients.
+    Calculates the total CO2 impact of a recipe based on its ingredients.
 
     Input:
     - recipe (pd.DataFrame): DataFrame containing ingredients for a specific recipe.
     
     Output:
-    - float: The total CO₂ impact for the recipe.
+    - float: The total CO2 impact for the recipe.
     
     Returns:
     - None: If any ingredient does not match a food class.
