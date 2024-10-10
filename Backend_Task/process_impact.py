@@ -29,7 +29,7 @@ def normalize_name(name: str) -> str:
 # Class to represent a Food Class
 class FoodClass:
     """
-    Represents a food class in the hierarchy, storing the ID, name, CO₂ impact, 
+    Represents a food class in the hierarchy, storing the ID, name, CO2 impact, 
     and parent class ID.
     
     Attributes:
