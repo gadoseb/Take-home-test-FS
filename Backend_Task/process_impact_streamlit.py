@@ -1,15 +1,11 @@
 import streamlit as st
 import pandas as pd
+import os
 from process_impact import *  # Import your custom module
 
-def load_data():
-    current_dir = os.path.dirname(__file__)
-    food_classes_df = pd.read_csv(os.path.join(current_dir, 'food_classes.csv'))
-    recipes_df = pd.read_csv(os.path.join(current_dir, 'recipes.csv'))
-    return food_classes_df, recipes_df
-
-# Load data
-food_classes_df, recipes_df = load_data()
+current_dir = os.path.dirname(__file__)
+food_classes_df = pd.read_csv(os.path.join(current_dir, 'food_classes.csv'))
+recipes_df = pd.read_csv(os.path.join(current_dir, 'recipes.csv'))
 
 # Sidebar navigation
 st.sidebar.title("Recipe Impact Calculator")

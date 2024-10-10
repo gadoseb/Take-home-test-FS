@@ -13,4 +13,4 @@ There are two tasks to complete: one backend-oriented data processing task and o
 ###  Frontend Task
 - User_and_Posts_streamlit.py: A Streamlit app that fetches and displays users and their latest posts. The app can be found here <https://take-home-test-fs-dmdb6hg6h2qiqgedej7wfh.streamlit.app/>
 
-- Frontend_App.js: A JavaScript application that fetches user data and their latest posts from a placeholder API and displays them in a user-friendly format. I  am not an expert of JavaScript, here is the js file of a React app essentially based on the code I wrote for 
+- Frontend_App.js: A JavaScript application that fetches user data and their latest posts from a placeholder API and displays them in a user-friendly format. I  am not an expert of JavaScript, here is the js file of a React app essentially based on the code I wrote for the Python version, by checking online I was able to effectively translate from Python to JavaScript. 
