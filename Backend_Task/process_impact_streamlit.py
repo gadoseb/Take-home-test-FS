@@ -17,20 +17,17 @@ st.write(recipes_df.head())  # Show the head of recipes data
 # Button to calculate impacts
 if st.button("Calculate Recipe Impacts"):
     st.header("Recipe Impact Results")
-
+    
     # Process each recipe and calculate impact
     try:
-        # Assuming process_all_recipes returns a dictionary with impacts
-        impacts = process_all_recipes(recipes_df)
-        st.write("Calculated Impacts for Recipes:")
-        
-        # Display results with recipe name, ID, and impact
-        for recipe_id, impact in impacts.items():
-            # Extract recipe name for each recipe ID
-            recipe_name = recipes_df[recipes_df['Recipe ID'] == recipe_id]['Recipe Name'].iloc[0]
+        impacts = {}
+        for recipe_id, recipe_data in recipes_df.groupby('Recipe ID'):
+            recipe_name = recipe_data['Recipe Name'].iloc[0]
+            impact = calculate_recipe_impact(recipe_data)  # Make sure this function is defined
             if impact is not None:
-                st.write(f"Recipe ID {recipe_id} - {recipe_name}: Total Impact = {impact:.2f} kg CO2")
-            else:
-                st.write(f"Ingredient not found in Recipe ID {recipe_id} - {recipe_name}")
+                impacts[recipe_id] = (recipe_name, impact)
+        
+        for recipe_id, (recipe_name, impact) in impacts.items():
+            st.write(f"Recipe ID {recipe_id} - {recipe_name}: Total Impact = {impact:.2f} kg CO2")
     except Exception as e:
         st.error(f"Error: {e}")
