@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Sidebar navigation
-st.sidebar.title("Users and Posts")
+st.title("Users and Posts")
 
 # Fetch data from JSONPlaceholder API
 response = requests.get("https://jsonplaceholder.typicode.com/users")
