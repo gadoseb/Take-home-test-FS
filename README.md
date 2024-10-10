@@ -5,7 +5,7 @@ There are two tasks to complete: one backend-oriented data processing task and o
 ### Backend Task
 - process_impact.py: This script calculates the CO₂ impact of recipes based on the ingredients used. It uses data from the food_classes.csv and recipes.csv files.
 
-- process_impact_streamlit.py: A Streamlit app that provides a user interface for calculating recipe impacts interactively. The app can be found here <(https://take-home-test-fs-jdygehunlwkzwbfrcybjhj.streamlit.app/)>
+- process_impact_streamlit.py: A Streamlit app that provides a user interface for calculating recipe impacts interactively. The app can be found here <https://take-home-test-fs-jdygehunlwkzwbfrcybjhj.streamlit.app/>
 
 - food_classes.csv: Contains food class data, including names, IDs, and CO₂ impacts per kilogram.
 
