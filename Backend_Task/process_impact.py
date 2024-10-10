@@ -3,8 +3,7 @@ import re
 import os
 
 # Load the data from CSV files
-# Load the data from CSV files
-def load_data():
+def load_data() -> pd.DataFrame:
     current_dir = os.path.dirname(__file__)
     food_classes_df = pd.read_csv(os.path.join(current_dir, 'food_classes.csv'))
     recipes_df = pd.read_csv(os.path.join(current_dir, 'recipes.csv'))

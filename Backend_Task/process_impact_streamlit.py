@@ -8,8 +8,8 @@ food_classes_df = pd.read_csv(os.path.join(current_dir, 'food_classes.csv'))
 recipes_df = pd.read_csv(os.path.join(current_dir, 'recipes.csv'))
 
 # Sidebar navigation
-st.sidebar.title("Recipe Impact Calculator")
-st.sidebar.write("Select an option to view data or calculate recipe impacts.")
+st.title("Recipe Impact Calculator")
+st.write("This app allows the user to preview the recipes data and to calculate recipe impacts by clicking the button below.")
 
 # Show raw data for recipes
 st.header("Recipes Data")
