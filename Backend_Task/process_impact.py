@@ -1,9 +1,14 @@
 import pandas as pd
 import re
+import os
 
 # Load the data from CSV files
-food_classes_df = pd.read_csv('food_classes.csv')
-recipes_df = pd.read_csv('recipes.csv')
+# Load the data from CSV files
+def load_data():
+    current_dir = os.path.dirname(__file__)
+    food_classes_df = pd.read_csv(os.path.join(current_dir, 'food_classes.csv'))
+    recipes_df = pd.read_csv(os.path.join(current_dir, 'recipes.csv'))
+    return food_classes_df, recipes_df
 
 # Function to normalise the name
 def normalize_name(name: str) -> str:
@@ -55,9 +60,6 @@ def build_food_class_hierarchy(df: pd.DataFrame) -> dict:
     for _, row in df.iterrows():
         food_classes[row['ID']] = FoodClass(row['ID'], row['Name'], row['Impact / kg'], row['Parent ID'])
     return food_classes
-
-# Build the food class hierarchy dictionary
-food_classes = build_food_class_hierarchy(food_classes_df)
 
 # Recursive function to retrieve impact
 def get_impact(food_class_id: int) -> float:
@@ -112,6 +114,11 @@ def calculate_recipe_impact(recipe: pd.DataFrame) -> float:
             print(e)
             return None
     return total_impact
+
+food_classes_df, recipes_df = load_data()
+
+# Build the food class hierarchy dictionary
+food_classes = build_food_class_hierarchy(food_classes_df)
 
 # Process each recipe
 for recipe_id, recipe_data in recipes_df.groupby('Recipe ID'):

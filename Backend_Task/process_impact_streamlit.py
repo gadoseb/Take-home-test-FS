@@ -4,8 +4,7 @@ import re
 from process_impact import *  # Import your custom module
 
 # Load data
-food_classes_df = pd.read_csv('food_classes.csv')
-recipes_df = pd.read_csv('recipes.csv')
+food_classes_df, recipes_df = load_data()
 
 # Sidebar navigation
 st.sidebar.title("Recipe Impact Calculator")
