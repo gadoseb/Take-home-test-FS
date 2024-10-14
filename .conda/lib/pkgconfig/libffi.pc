@@ -1,0 +1,11 @@
+prefix=/Users/sebastiano/Documents/PytonScripts/GitHub_Clones/Take-home-test-FS/.conda
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+toolexeclibdir=${libdir}
+includedir=/Users/sebastiano/Documents/PytonScripts/GitHub_Clones/Take-home-test-FS/.conda/include
+
+Name: libffi
+Description: Library supporting Foreign Function Interfaces
+Version: 3.4.4
+Libs: -L${toolexeclibdir} -lffi
+Cflags: -I${includedir}

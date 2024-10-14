@@ -1,0 +1,5 @@
+#!/Users/sebastiano/Documents/PytonScripts/GitHub_Clones/Take-home-test-FS/.conda/bin/python3.11
+
+from idlelib.pyshell import main
+if __name__ == '__main__':
+    main()

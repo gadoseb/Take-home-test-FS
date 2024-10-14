@@ -1,0 +1,20 @@
+#
+# Author: Lasse Collin
+#
+# This file has been put into the public domain.
+# You can do whatever you want with this file.
+#
+
+prefix=/Users/sebastiano/Documents/PytonScripts/GitHub_Clones/Take-home-test-FS/.conda
+exec_prefix=/Users/sebastiano/Documents/PytonScripts/GitHub_Clones/Take-home-test-FS/.conda
+libdir=/Users/sebastiano/Documents/PytonScripts/GitHub_Clones/Take-home-test-FS/.conda/lib
+includedir=/Users/sebastiano/Documents/PytonScripts/GitHub_Clones/Take-home-test-FS/.conda/include
+
+Name: liblzma
+Description: General purpose data compression library
+URL: https://xz.tukaani.org/xz-utils/
+Version: 5.4.6
+Cflags: -I${includedir}
+Cflags.private: -DLZMA_API_STATIC
+Libs: -L${libdir} -llzma
+Libs.private: -pthread -lpthread

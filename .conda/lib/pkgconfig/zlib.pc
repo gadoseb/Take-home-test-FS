@@ -1,0 +1,13 @@
+prefix=/Users/sebastiano/Documents/PytonScripts/GitHub_Clones/Take-home-test-FS/.conda
+exec_prefix=/Users/sebastiano/Documents/PytonScripts/GitHub_Clones/Take-home-test-FS/.conda
+libdir=/Users/sebastiano/Documents/PytonScripts/GitHub_Clones/Take-home-test-FS/.conda/lib
+sharedlibdir=/Users/sebastiano/Documents/PytonScripts/GitHub_Clones/Take-home-test-FS/.conda/lib
+includedir=/Users/sebastiano/Documents/PytonScripts/GitHub_Clones/Take-home-test-FS/.conda/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
