@@ -1,5 +1,5 @@
 # Foodsteps Take-Home Test
-There are two tasks to complete: one backend-oriented data processing task and one frontend-oriented task.
+There are two tasks to complete: one backend-oriented data processing task and one frontend-oriented task. Here is the link to the Google Drive folder which contains the original README.md and the files for the backend-oriented task [Drive](<https://drive.google.com/drive/folders/1-MsyEuqqXvvyOeg4r8qbhYYZSkrH7c81>).
 
 ## Description of Key Files
 ### Backend Task
