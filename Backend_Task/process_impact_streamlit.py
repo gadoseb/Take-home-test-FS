@@ -7,7 +7,6 @@ current_dir = os.path.dirname(__file__)
 food_classes_df = pd.read_csv(os.path.join(current_dir, 'food_classes.csv'))
 recipes_df = pd.read_csv(os.path.join(current_dir, 'recipes.csv'))
 
-# Sidebar navigation
 st.title("Recipe Impact Calculator")
 st.write("This app allows the user to preview the recipes data and to calculate recipe impacts by clicking the button below.")
 
