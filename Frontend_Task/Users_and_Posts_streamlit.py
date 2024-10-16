@@ -16,7 +16,7 @@ latest_posts = {}
 for post in posts_data:
     user_id = post["userId"]
     post_id = post["id"]
-    if user_id not in latest_posts or post_id > latest_posts[user_id]["id"]:
+    if user_id not in latest_posts or post_id > latest_posts[user_id]["id"]: 
         latest_posts[user_id] = post
 
 # Search bar for filtering
