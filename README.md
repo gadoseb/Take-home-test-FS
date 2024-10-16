@@ -24,3 +24,6 @@ The most difficult part of the challenge for me was the JavaScript. To solve the
 The first tasks was very interesting, I personally would use a Jupyter Notebook to solve it. However, the Python script was used as module for the Streamlit app.
 
 The additional streamlit apps were not asked for the task, but for the backend task I had already similar scripts so it was more a personal exercise. For the frontend task it helped me quite a lot in solving the logic behind the problem.
+
+## Supporting Information File
+A Jupyter Notebook has been uploaded for a smoother explanation of the different code logics. Here is an exported version to a HTML to visualise it quicker. <file:///Users/sebastiano/Documents/PytonScripts/Foodsteps_CodeChallenge/Notebook_SI.html>
